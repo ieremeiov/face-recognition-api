@@ -3,7 +3,7 @@ const Clarifai = require('clarifai');
 // eg.: http://facedetection.jaysalvat.com/img/faces.jpg
 // Don't use the API key on the front-end
 const app = new Clarifai.App({
-    apiKey: 'd503ae45055e40c7ab73f42be57b1471'
+    apiKey: process.env.CLARIFAI_API_KEY
 });
 
 const handleApiCall = (req, res) => {
