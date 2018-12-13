@@ -25,38 +25,6 @@ const db = knex({
     }
 });
 
-const database = {
-    users: [
-        {
-            id: '123',
-            name: 'Cip',
-            email: 'cip@gmail.com',
-            password: 'qwqwqw',
-            entries: 0,
-            joined: new Date()
-        },
-        {
-            id: '124',
-            name: 'Gigi',
-            email: 'gigi@gmail.com',
-            password: 'qwqwqw',
-            entries: 0,
-            joined: new Date()
-        }
-    ],
-    login: [
-        {
-            id: '987',
-            hash: '',
-            email: 'cip@gmail.com'
-        },
-        {
-            id: '988',
-            hash: '',
-            email: 'gigi@gmail.com',
-        }
-    ]
-}
 
 app.listen(process.env.PORT || 3000, () => {
     console.log(`app is running on port ${process.env.PORT}`);
@@ -64,7 +32,7 @@ app.listen(process.env.PORT || 3000, () => {
 
 
 app.get('/', (req, res) => {
-    res.send(database.users)
+    res.json("Started")
 });
 
 
